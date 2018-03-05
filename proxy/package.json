@@ -1,0 +1,30 @@
+{
+  "name": "proxy-server-nicolas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicola24/proxy-server-nicolas.git"
+  },
+  "author": "nicolas peyrichou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicola24/proxy-server-nicolas/issues"
+  },
+  "homepage": "https://github.com/nicola24/proxy-server-nicolas#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0"
+  }
+}

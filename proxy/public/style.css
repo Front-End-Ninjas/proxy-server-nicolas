@@ -1,15 +1,19 @@
+#container {
+  
+}
+
 #gallery {
-  border: 1px solid black;
+  border: 2px solid blue;
 }
 
 #description {
-  border: 1px solid black;
+  border: 2px solid red;
 }
 
 #similar {
-  border: 1px solid black;
+  border: 2px solid green;
 }
 
 #review {
-  border: 1px solid black;
+  border: 2px solid orange;
 }

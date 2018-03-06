@@ -1,19 +1,35 @@
+body {
+  font-family: "Helvetica";
+}
+
 #container {
-  
+
 }
 
 #gallery {
   border: 2px solid blue;
+  float: left;
+  height: 330px;
+  width: 400px;
+  padding-top: 10px;
+  padding-right: 10px;
 }
 
 #description {
   border: 2px solid red;
+  height: 330px;
+  overflow: auto;
+  padding-top: 10px;
+  padding-left: 10px;
+  width: 500px;
 }
 
 #similar {
   border: 2px solid green;
+  width: 924px;
 }
 
 #review {
   border: 2px solid orange;
+  width: 924px;
 }

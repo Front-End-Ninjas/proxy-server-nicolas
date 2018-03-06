@@ -2,23 +2,35 @@ body {
   font-family: "Helvetica";
 }
 
+header {
+  height: 100px;
+  background-color: #232f3e;
+  padding-top: 10px;
+  padding-bottom: 100px;
+}
+
+#nile_logo {
+    margin-left: 30px;
+    max-width: 100%;
+    height: 90px;
+}
+
 #container {
-  border: 2px solid purple;
-  padding: 10px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 #gallery {
-  border: 2px solid blue;
   float: left;
-  height: 330px;
+  height: 450px;
   width: 35%;
   padding-top: 10px;
   padding-right: 10px;
 }
 
 #description {
-  border: 2px solid red;
-  height: 330px;
+  height: 450px;
   overflow: auto;
   padding-top: 10px;
   padding-left: 10px;
@@ -26,11 +38,15 @@ body {
 }
 
 #similar {
-  border: 2px solid green;
-  width: 75%;
+  width: 100%;
+  height: 350px;
 }
 
 #review {
-  border: 2px solid orange;
   width: 75%;
+}
+
+footer {
+  height: 100px;
+  background-color: #232f3e;
 }

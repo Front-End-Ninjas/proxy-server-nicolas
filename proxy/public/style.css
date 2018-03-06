@@ -37,9 +37,20 @@ header {
   width: 40%;
 }
 
+#sponsored h3 {
+  color: #cc6600;
+  font-size: 18px;
+  font-weight: bold;
+}
+
 #similar {
   width: 100%;
   height: 350px;
+}
+
+#customer h2 {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 #review {
@@ -49,4 +60,11 @@ header {
 footer {
   height: 100px;
   background-color: #232f3e;
+}
+
+footer p {
+  padding-top: 30px;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
 }

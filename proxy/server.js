@@ -17,7 +17,7 @@ app.all('/item/9/images', (req, res) => {
   apiProxy.web(req, res, { target: serverGallery });
 });
 
-app.all('/item/9/description', (req, res) => {
+app.all('/item/0/description', (req, res) => {
   apiProxy.web(req, res, { target: serverDescription });
 });
 

@@ -3,3 +3,9 @@ node_modules
 
 ### OSX ###
 .DS_STORE
+
+### component ###
+description-component
+gallery-component
+review-component
+similar-component

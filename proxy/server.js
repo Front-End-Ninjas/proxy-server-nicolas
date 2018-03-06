@@ -13,7 +13,7 @@ const serverDescription = 'http://localhost:3001';
 const serverSimilar = 'http://localhost:3000';
 const serverReview = 'http://localhost:3002';
 
-app.all('/item/0/images', (req, res) => {
+app.all('/item/1/images', (req, res) => {
   apiProxy.web(req, res, { target: serverGallery });
 });
 
@@ -21,8 +21,7 @@ app.all('/item/0/description', (req, res) => {
   apiProxy.web(req, res, { target: serverDescription });
 });
 
-app.all('/item/0/similar', (req, res) => {
-  console.log('hello');
+app.all('/item/1/similar', (req, res) => {
   apiProxy.web(req, res, { target: serverSimilar });
 });
 

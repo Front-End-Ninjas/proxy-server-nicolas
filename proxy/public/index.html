@@ -38,20 +38,23 @@
   <script src="http://localhost:3000/app.bundle.js" type="text/javascript"></script>
   <script src="http://localhost:3002/bundle.js" type="text/javascript"></script>
   <script>
+
+    const id = 78;
+
     ReactDOM.render(
-      React.createElement(App),
+      React.createElement(App, {idProduct: id}, null),
       document.getElementById('gallery')
     );
     ReactDOM.render(
-      React.createElement(IndexDesc),
+      React.createElement(IndexDesc, {idProduct: id}, null),
       document.getElementById('description')
     );
     ReactDOM.render(
-      React.createElement(SimilarListView),
+      React.createElement(SimilarListView, {idProduct: id}, null),
       document.getElementById('similar')
     );
     ReactDOM.render(
-      React.createElement(Review),
+      React.createElement(Review, {idProduct: id}, null),
       document.getElementById('review')
     );
 </script>

@@ -39,22 +39,23 @@
   <script src="http://localhost:3002/bundle.js" type="text/javascript"></script>
   <script>
 
-    const id = 56;
+    //const id = 56;
+    const id = Math.floor(Math.random() * 299);
 
     ReactDOM.render(
-      React.createElement(App, {idProduct: id}, null),
+      React.createElement(App, {id: id}, null),
       document.getElementById('gallery')
     );
     ReactDOM.render(
-      React.createElement(IndexDesc, {idProduct: id}, null),
+      React.createElement(IndexDesc, {id: id}, null),
       document.getElementById('description')
     );
     ReactDOM.render(
-      React.createElement(SimilarListView, {idProduct: id}, null),
+      React.createElement(SimilarListView, {id: id}, null),
       document.getElementById('similar')
     );
     ReactDOM.render(
-      React.createElement(Review, {idProduct: id}, null),
+      React.createElement(Review, {id: id}, null),
       document.getElementById('review')
     );
 </script>

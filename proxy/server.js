@@ -13,7 +13,7 @@ const serverDescription = 'http://localhost:3001';
 const serverSimilar = 'http://localhost:3000';
 const serverReview = 'http://localhost:3002';
 
-const id = 78;
+const id = 14;
 
 app.all(`/item/${id}/images`, (req, res) => {
   apiProxy.web(req, res, { target: serverGallery });

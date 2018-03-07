@@ -6,29 +6,27 @@ const httpProxy = require('http-proxy');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-const apiProxy = httpProxy.createProxyServer();
+const proxy = httpProxy.createProxyServer();
 
 const serverGallery = 'http://localhost:3003';
 const serverDescription = 'http://localhost:3001';
 const serverSimilar = 'http://localhost:3000';
 const serverReview = 'http://localhost:3002';
 
-const id = 14;
-
-app.all(`/item/${id}/images`, (req, res) => {
-  apiProxy.web(req, res, { target: serverGallery });
+app.get('/item/*/images', (req, res) => {
+  proxy.web(req, res, { target: serverGallery });
 });
 
-app.all(`/item/${id}/description`, (req, res) => {
-  apiProxy.web(req, res, { target: serverDescription });
+app.get('/item/*/description', (req, res) => {
+  proxy.web(req, res, { target: serverDescription });
 });
 
-app.all(`/item/${id}/similar`, (req, res) => {
-  apiProxy.web(req, res, { target: serverSimilar });
+app.get('/item/*/similar', (req, res) => {
+  proxy.web(req, res, { target: serverSimilar });
 });
 
-app.all(`/item/${id}/reviews`, (req, res) => {
-  apiProxy.web(req, res, { target: serverReview });
+app.get('/item/*/reviews', (req, res) => {
+  proxy.web(req, res, { target: serverReview });
 });
 
 app.listen(3004, () => console.log('Listening on port 3004!'));

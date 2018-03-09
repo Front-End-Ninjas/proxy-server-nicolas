@@ -16,7 +16,6 @@ const serverReview = 'http://nilecustomerreviews-env.znsae38bc5.us-west-1.elasti
 app.get('/item/*/images', (req, res) => {
   proxy.web(req, res, { target: serverGallery });
 });
-
 app.get('/item/*/description', (req, res) => {
   proxy.web(req, res, { target: serverDescription });
 });

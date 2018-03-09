@@ -4,28 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="http://localhost:3003/style.css">
-  <link rel="stylesheet" href="http://localhost:3001/style.css">
-  <link rel="stylesheet" href="http://localhost:3000/style/styles.css">
-  <link rel="stylesheet" href="http://localhost:3002/index.css">
+  <!-- <link rel="stylesheet" href="http://imagegallery-env.us-west-1.elasticbeanstalk.com/style.css">
+  <link rel="stylesheet" href="http://nileproductdescription-env.zkb3gk9nqy.us-west-1.elasticbeanstalk.com/style.css">
+  <link rel="stylesheet" href="http://fec-nile-similaritems.us-west-1.elasticbeanstalk.com/style/styles.css">
+  <link rel="stylesheet" href="http://nilecustomerreviews-env.znsae38bc5.us-west-1.elasticbeanstalk.com/index.css"> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <title>NILE APP</title>
 </head>
 <body>
   <header>
-    <img id="nile_logo" src="http://localhost:3004/nile_logo.png">
+    <img id="nile_logo" src="https://s3-us-west-1.amazonaws.com/nile-image-assets/nile_logo.png">
   </header>
   <div id="container">
     <div id="gallery"></div>
     <div id="description"></div>
-    <div id="sponsored">
-      <h3>Sponsored products related to this item</h3>
-    </div>
     <div id="similar"></div>
-    <div id="customer">
-      <h2>Customer Reviews</h2>
-    </div>
     <div id="review"></div>
   </div>
   <footer>
@@ -33,29 +27,29 @@
   </footer>
   <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-  <script src="http://localhost:3003/bundle.js" type="text/javascript"></script>
-  <script src="http://localhost:3001/dist/bundle.js" type="text/javascript"></script>
-  <script src="http://localhost:3000/app.bundle.js" type="text/javascript"></script>
-  <script src="http://localhost:3002/bundle.js" type="text/javascript"></script>
+  <script src="http://imagegallery-env.us-west-1.elasticbeanstalk.com/bundle.js" type="text/javascript"></script>
+  <script src="http://nileproductdescription-env.zkb3gk9nqy.us-west-1.elasticbeanstalk.com/dist/bundle.js" type="text/javascript"></script>
+  <script src="http://fec-nile-similaritems.us-west-1.elasticbeanstalk.com/app.bundle.js" type="text/javascript"></script>
+  <script src="http://nilecustomerreviews-env.znsae38bc5.us-west-1.elasticbeanstalk.com/bundle.js" type="text/javascript"></script>
   <script>
 
-    //const id = 56;
-    const id = Math.floor(Math.random() * 299);
+    // return the querystring part of a URL - URL + /?id=x
+    const itemNumber = window.location.search.slice(4) || 0;
 
     ReactDOM.render(
-      React.createElement(App, {id: id}, null),
+      React.createElement(imageGallery, {id: itemNumber}, null),
       document.getElementById('gallery')
     );
     ReactDOM.render(
-      React.createElement(IndexDesc, {id: id}, null),
+      React.createElement(IndexDesc, {id: itemNumber}, null),
       document.getElementById('description')
     );
     ReactDOM.render(
-      React.createElement(SimilarListView, {id: id}, null),
+      React.createElement(Similar, {id: itemNumber}, null),
       document.getElementById('similar')
     );
     ReactDOM.render(
-      React.createElement(Review, {id: id}, null),
+      React.createElement(Review, {id: itemNumber}, null),
       document.getElementById('review')
     );
 </script>

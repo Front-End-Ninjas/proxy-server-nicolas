@@ -9,3 +9,6 @@ description-component
 gallery-component
 review-component
 similar-component
+
+### Jest Coverage ###
+coverage

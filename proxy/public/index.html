@@ -27,17 +27,21 @@
   </footer>
   <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-  <script src="http://imagegallery-env.us-west-1.elasticbeanstalk.com/bundle.js" type="text/javascript"></script>
+  <!-- <script src="http://imagegallery-env.us-west-1.elasticbeanstalk.com/bundle.js" type="text/javascript"></script>
   <script src="http://nileproductdescription-env.zkb3gk9nqy.us-west-1.elasticbeanstalk.com/dist/bundle.js" type="text/javascript"></script>
   <script src="http://fec-nile-similaritems.us-west-1.elasticbeanstalk.com/app.bundle.js" type="text/javascript"></script>
-  <script src="http://nilecustomerreviews-env.znsae38bc5.us-west-1.elasticbeanstalk.com/bundle.js" type="text/javascript"></script>
+  <script src="http://nilecustomerreviews-env.znsae38bc5.us-west-1.elasticbeanstalk.com/bundle.js" type="text/javascript"></script> -->
+  <script src="http://localhost:3003/bundle.js" type="text/javascript"></script>
+  <script src="http://localhost:3001/dist/bundle.js" type="text/javascript"></script>
+  <script src="http://localhost:3000/app.bundle.js" type="text/javascript"></script>
+  <script src="http://localhost:3002/bundle.js" type="text/javascript"></script>
   <script>
 
     // return the querystring part of a URL - URL + /?id=x
     const itemNumber = window.location.search.slice(4) || 0;
 
     ReactDOM.render(
-      React.createElement(imageGallery, {id: itemNumber}, null),
+      React.createElement(App, {id: itemNumber}, null),
       document.getElementById('gallery')
     );
     ReactDOM.render(
@@ -45,7 +49,7 @@
       document.getElementById('description')
     );
     ReactDOM.render(
-      React.createElement(Similar, {id: itemNumber}, null),
+      React.createElement(SimilarListView, {id: itemNumber}, null),
       document.getElementById('similar')
     );
     ReactDOM.render(
